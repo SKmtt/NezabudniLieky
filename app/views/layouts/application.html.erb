@@ -17,7 +17,10 @@
     <div style="background-color:#0ab228" class="menuBar col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <ul class="nav navbar-nav pull-left" style="margin-left:10%;">
         <li class="active"><%= link_to 'Domov', home_path %></li>
-        <li><a href="#">Objednaj</a></li>
+        <% if user_signed_in? %>
+            <li><%= link_to 'Objednaj', home_path %></li>
+            <li><%= link_to 'Môj rozpis', schedule_path %></li>
+        <% end %>
         <li><a href="#">Info</a></li>
       </ul>
       <ul class="nav navbar-nav pull-right" style="margin-right:10%;">

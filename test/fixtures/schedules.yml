@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: one
+  pill_id: one
+  state: MyString
+  remaining: 2017-05-13
+
+two:
+  user_id: two
+  pill_id: two
+  state: MyString
+  remaining: 2017-05-13

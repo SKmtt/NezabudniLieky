@@ -1,0 +1,7 @@
+<% @scheduled.each do |f| %>
+
+    <% Pill.where(id: f.pill_id).each do |p| %>
+      <%= p.name %>
+    <% end %>
+
+<% end %>
