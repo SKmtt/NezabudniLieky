@@ -3,31 +3,31 @@
 <div align="center" class="row">
 
   <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-2">
-    <h2>Sign up</h2>
+    <h2>Zaregistruj sa</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= devise_error_messages! %>
-
+        <br>
         <div class="field">
           <%= f.label :email %><br/>
           <%= f.email_field :email, autofocus: true %>
         </div>
-
+<br/>
         <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <%= f.label :heslo %>
+          <% if @minimum_password_length %><br/>
+              <em>(Minimálne <%= @minimum_password_length %> znakov)</em>
           <% end %><br/>
           <%= f.password_field :password, autocomplete: "off" %>
         </div>
-
+<br/>
         <div class="field">
-          <%= f.label :password_confirmation %><br/>
+          <%= f.label :potvrdenie_hesla %><br/>
           <%= f.password_field :password_confirmation, autocomplete: "off" %>
         </div>
-
+<br/>
         <div class="actions">
-          <%= f.submit "Sign up" %>
+          <%= f.submit "Zaregistrovať" %>
         </div>
     <% end %>
   </div>

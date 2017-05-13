@@ -35,3 +35,9 @@
 .menuBar a:active {
     color: whitesmoke;
 }
+
+.menuBar ul {
+    display: inline-block;
+    font-size: 150%;
+    font-family: "Segoe UI Light", serif;
+}
