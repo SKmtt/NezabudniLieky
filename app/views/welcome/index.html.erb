@@ -6,7 +6,7 @@
         <li><a href="#">Objednaj</a></li>
         <li><a href="#">Info</a></li>
       </ul>
-      <ul class="nav navbar-nav pull-right">
+      <ul id="rightMenu" class="nav navbar-nav pull-right">
         <% if user_signed_in? %>
             <li>
               <a rel="nofollow" data-method="delete" href="<%= destroy_user_session_path %>">Odhlasit</a>
@@ -45,12 +45,3 @@
     </div>
   </div>
 </div>
-
-<script>
-    (function($, viewport){
-        $(document).ready(function() {
-            return !!viewport.is('xs');
-
-        });
-    })(jQuery, ResponsiveBootstrapToolkit);
-</script>
