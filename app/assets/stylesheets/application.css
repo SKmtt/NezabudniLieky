@@ -41,3 +41,16 @@
     font-size: 150%;
     font-family: "Segoe UI Light", serif;
 }
+
+.btn.btn-reg {
+    border-radius: 0;
+    font-family: "Segoe UI Light", serif;
+    color: whitesmoke;
+    background-color: #0ab228;
+    border-color: #0ab228;
+}
+
+.btn.btn-reg:hover{
+    background-color: #eeeeee;
+    color: #0ab228;
+}

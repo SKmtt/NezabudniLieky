@@ -3,28 +3,30 @@
 <div align="center" class="row">
 
   <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 col-lg-offset-3 col-md-offset-2">
-    <h2>Log in</h2>
+    <h2>Prihlásenie</h2>
+
+    <br/>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="field">
           <%= f.label :email %><br/>
           <%= f.email_field :email, autofocus: true %>
         </div>
-
+        <br/>
         <div class="field">
-          <%= f.label :password %><br/>
+          <%= f.label :heslo %><br/>
           <%= f.password_field :password, autocomplete: "off" %>
         </div>
-
+        <br/>
         <% if devise_mapping.rememberable? -%>
             <div class="field">
               <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
+              <%= f.label :zapamätať %>
             </div>
         <% end -%>
-
+        <br/>
         <div class="actions">
-          <%= f.submit "Log in" %>
+          <%= f.submit "Prihlás", :class => "btn btn-default btn-lg btn-reg" %>
         </div>
     <% end %>
   </div>
