@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+
+@import "_bootstrap-sprockets.scss";
+@import "_bootstrap.scss";
+
+.menuBar a:link {
+    color: whitesmoke;
+}
+
+/* visited link */
+.menuBar a:visited {
+    color: whitesmoke;
+}
+
+/* mouse over link */
+.menuBar a:hover {
+    color: #0ab228;
+}
+
+/* selected link */
+.menuBar a:active {
+    color: whitesmoke;
+}
