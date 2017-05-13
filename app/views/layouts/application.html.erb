@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NezabudniLieky</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <% if user_signed_in? %>
+
+
+      <%= link_to 'Domov', home_path, :class => "btn btn-default btn-circle btn-lg" %>
+
+      Pouzivatel: <%= current_user.email %>
+
+      <a rel="nofollow" data-method="delete" href="<%= destroy_user_session_path %>" class="btn btn-default btn-lg pull-right" role="button">
+        Odhlasit </a>
+
+  <% else %>
+      <%= link_to 'Domov', root_path, :class => "btn btn-default btn-circle btn-lg" %>
+      <ul class="list-inline pull-right">
+        <li><a href="<%= new_user_registration_path %>" class="btn btn-default btn-lg" role="button"> Registracia </a>
+        </li>
+        <li><a href="<%= new_user_session_path %>" class="btn btn-default btn-lg" role="button"> Prihlasenie </a></li>
+      </ul>
+  <% end %>
+
+    <%= yield %>
+  </body>
+</html>
