@@ -12,8 +12,41 @@
 
 <body>
 
+<div class="container-fluid">
+  <div class="row">
+    <div style="background-color:#0ab228" class="menuBar col-lg-12 col-md-12 col-sm-12 col-xs-12">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to 'Domov', home_path %></li>
+        <li><a href="#">Objednaj</a></li>
+        <li><a href="#">Info</a></li>
+      </ul>
+      <ul id="rightMenu" class="nav navbar-nav pull-right">
+        <% if user_signed_in? %>
+            <li>
+              <a rel="nofollow" data-method="delete" href="<%= destroy_user_session_path %>">Odhlasit</a>
+            </li>
+        <% else %>
+            <li>
+              <a href="<%= new_user_registration_path %>">
+                Registracia </a>
+            </li>
+            <li>
+              <a href="<%= new_user_session_path %>"> Prihlasenie </a>
+            </li>
+        <% end %>
+      </ul>
+    </div>
 
-<%= yield %>
+    <% if user_signed_in? %>
+        Pouzivatel: <%= current_user.email %>
+
+    <% end %>
+  </div>
+
+
+  <%= yield %>
+</div>
+
 
 <!--</div>-->
 <!--</div>-->
