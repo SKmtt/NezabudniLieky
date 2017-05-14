@@ -67,6 +67,22 @@ th {
     border: 1px solid whitesmoke;
 }
 
+label {
+    font-family: "Segoe UI Light", serif;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-family: "Segoe UI Light", serif;
+}
+
+p {
+    font-family: "Segoe UI Light", serif;
+    font-size: 150%;
+    text-align: justify;
+}
+
 .nedela {
     border-right: 1px solid darkgray;
 }
