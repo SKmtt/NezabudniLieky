@@ -23,7 +23,10 @@
       <ul class="nav navbar-nav pull-right" style="margin-right:10%;">
         <% if user_signed_in? %>
             <li>
-              <a rel="nofollow" data-method="delete" href="<%= destroy_user_session_path %>">Odhlasit</a>
+              Použivateľ: <%= current_user.email %>
+            </li>
+            <li>
+              <a rel="nofollow" data-method="delete" href="<%= destroy_user_session_path %>">Odhlásiť</a>
             </li>
         <% else %>
             <li>
@@ -36,11 +39,6 @@
         <% end %>
       </ul>
     </div>
-
-    <% if user_signed_in? %>
-        Pouzivatel: <%= current_user.email %>
-
-    <% end %>
   </div>
 
 
