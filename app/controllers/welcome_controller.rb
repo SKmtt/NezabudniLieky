@@ -1,7 +1,13 @@
 class WelcomeController < ApplicationController
   def index
-    if user_signed_in?
-      redirect_to home_path
+  end
+
+  def schedule
+    if !user_signed_in?
+      redirect_to root_path
     end
+  end
+
+  def info
   end
 end

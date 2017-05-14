@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'home' => 'home#index'
-
-  get 'schedule' => 'home#schedule'
+  get 'schedule' => 'welcome#schedule'
+  get 'info' => 'welcome#info'
 
   devise_for :users
   root 'welcome#index'
