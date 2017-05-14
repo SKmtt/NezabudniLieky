@@ -12,6 +12,13 @@
 
 ActiveRecord::Schema.define(version: 20170513171651) do
 
+  create_table "orders", force: :cascade do |t|
+    t.integer  "user_id_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id_id"], name: "index_orders_on_user_id_id"
+  end
+
   create_table "pills", force: :cascade do |t|
     t.string   "name"
     t.string   "idname"

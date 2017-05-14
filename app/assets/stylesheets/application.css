@@ -54,3 +54,32 @@
     background-color: #eeeeee;
     color: #0ab228;
 }
+
+td, tr {
+    border: 1px solid darkgray;
+}
+
+th {
+    font-family: "Segoe UI Light", serif;
+    color: whitesmoke;
+    background-color: #0ab228;
+    font-weight: normal;
+    border: 1px solid whitesmoke;
+}
+
+.nedela {
+    border-right: 1px solid darkgray;
+}
+
+.emptyTh{
+    background-color: white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    border-left: 1px solid darkgray;
+    border-right: 1px solid darkgray;
+}
+
+.legenda th, .legenda td {
+    text-align: center;
+    border: 1px solid darkgray;
+}

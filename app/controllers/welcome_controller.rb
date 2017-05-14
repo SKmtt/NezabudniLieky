@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
 
   def schedule
     if !user_signed_in?
-      redirect_to root_path
+      # redirect_to root_path
     end
   end
 
