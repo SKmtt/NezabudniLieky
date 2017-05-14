@@ -22,11 +22,10 @@
         <% end %>
         <li><%= link_to 'Informácie', info_path %></li>
       </ul>
+
       <ul class="nav navbar-nav pull-right" style="margin-right:10%;">
         <% if user_signed_in? %>
-            <li>
-              Použivateľ: <%= current_user.email %>
-            </li>
+            <li><a href="">Používateľ: <%= current_user.email %></a></li>
             <li>
               <a rel="nofollow" data-method="delete" href="<%= destroy_user_session_path %>">Odhlásiť</a>
             </li>
@@ -45,9 +44,5 @@
 
   <%= yield %>
 </div>
-
-
-<!--</div>-->
-<!--</div>-->
 </body>
 </html>
